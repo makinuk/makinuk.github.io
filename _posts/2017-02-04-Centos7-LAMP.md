@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Centos7 lamp installation"
+date:   2017-02-04 01:10:37 +0300
+categories: [Centos, Apache,Php, MariaDb]
+---
+
 ## Prepare Machine
 
 ```sh
