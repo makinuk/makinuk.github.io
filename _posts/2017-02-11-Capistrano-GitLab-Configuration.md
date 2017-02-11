@@ -9,7 +9,9 @@ categories: [Capistrano]
 ## Configure Server
 
 - configure **deploy** user 
-```ssh 
+
+```sh
+
 groupadd deployers
 adduser deploy
 usermod -a -G deployers deploy
@@ -22,9 +24,11 @@ usermod -a -G deployers deploy
 %deployers      ALL=(ALL) ALL
 
 ..
+
 ```
 - generate ssh-key for deploy user
-```ssh
+```sh
+
 su deploy
 ssh-keygen -t rsa -b 2048
 ```
