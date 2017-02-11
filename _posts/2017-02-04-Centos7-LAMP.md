@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Centos7 lamp installation"
+title:  "Centos7 LEMP installation"
 date:   2017-02-04 01:10:37 +0300
 categories: [Centos, Apache,Php, MariaDb]
 ---
