@@ -238,7 +238,7 @@ Are you already a web developer and want to create a mobile application?  Then c
 * [Codepalousa <span>- Louisville, Ky (April 27th-30th, 2015)</span>](http://codepalousa.com)
 * [SoCal Code Camp <span>- Fullerton, Ca (March 7th & 8th, 2015)</span>](http://www.socalcodecamp.net/)
 * [Las Vegas Code Camp <span>- Las Vegas, Nv (February 21, 2015)</span>](http://spring2015.lasvegascodecamp.com/home)
-* [Arizona Software Community <span>- Phoenix, Az (January 2015)</span>](http://www.meetup.com/azsoftcom/events/219258109/)
+* [Istanbul Software Community <span>- Phoenix, Az (January 2015)</span>](http://www.meetup.com/azsoftcom/events/219258109/)
 
 <p>&nbsp;</p>
 
