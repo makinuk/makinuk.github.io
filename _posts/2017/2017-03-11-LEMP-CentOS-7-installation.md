@@ -3,7 +3,10 @@ layout: post
 title: LEMP-CentOS 7 Installation		
 published: true		
 categories: [Centos7]		
-date: 2017-03-10 20:45:35		
+date: 2017-03-10 20:45:35
+excerpt: | 
+Nginx, Php7, mariadb installation on centos 7
+LEMP-CentOS 7 Installation
 ---		
  
 ## Prepare Machine
