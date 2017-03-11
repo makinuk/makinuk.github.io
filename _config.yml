@@ -9,10 +9,10 @@ repository: digitaldrummerj/blog-theme
 #                                                 /____/
 #
 # Title of your website
-title: 'Justin James'
+title: 'Mustafa AKIN'
 
 # The slogan describes your website and is used on homepage in <title> and other important places
-slogan: 'Web Developer, Speaker, and Agile enthusiast from Arizona'
+slogan: 'Web Developer, Speaker, and Agile enthusiast from Istanbul'
 
 # The description is used on homepage and in the footer to quickly describe your website. Use a maximum of 150 characters for SEO-purposes.
 description: 'Sharing my knowledge with others in a manner that is easy to understand and consume.'
@@ -26,12 +26,12 @@ credits: '<p>Created with &hearts; by <a href="<<credit>>">Justin James</a>. All
 
 # This URL is the main address for absolute links. Don't include a slash at the end.
 #
-url: 'http://digitaldrummerj.me'
+url: 'http://blog.polyboly.com'
 baseurl: ''
 
 # This is for the editing function in _/includes/improve_content
 # Leave it empty if your site is not on GitHub/GitHub Pages
-improve_content: https://github.com/digitaldrummerj/digitaldrummerj.github.io/blob/master
+#improve_content: https://github.com/digitaldrummerj/digitaldrummerj.github.io/blob/master
 
 # This URL points directly to the images directory making
 # things easier to link to images in posts and templates. It needs a slash at the end.
@@ -39,7 +39,7 @@ improve_content: https://github.com/digitaldrummerj/digitaldrummerj.github.io/bl
 # Example: <img src="{{ site.urlimg}}/{{ post.image.title }}" />
 # Markdown-Example for posts ![Image Text]({{ site.urlimg}}/image.jpg)
 #
-urlimg: 'http://digitaldrummerj.me/images'
+urlimg: 'http://blog.polyboly.com/images'
 
 
 # Logo size is 600x80 pixels
@@ -218,7 +218,7 @@ socialmedia:
 #
 # used in _includes/comments
 
-disqus_shortname: digitaldrummerj
+disqus_shortname: makinuk
 
 
 #      _____
@@ -242,7 +242,7 @@ sass:
 #
 # used in _includes/footer_scripts
 
-google_analytics_tracking_id: UA-58457343-1
+google_analytics_tracking_id: UA-93484050-1
 
 
 
