@@ -1,15 +1,16 @@
 ---
-layout: post
+layout: post	
 title: Capistrano configuration for deploy with gitlab
 published: true
-date: 2017-03-11 16:55:10
 categories: [Capistrano]
+date: 2017-03-11 10:45:35
 excerpt: | 
     Capistrano is written in Ruby, but it can easily be used to deploy any language.
 
     If your language or framework has special deployment requirements, Capistrano can easily be extended to support them.
 ---
 
+## Capistano
 
 Capistrano is written in Ruby, but it can easily be used to deploy any language.
 
