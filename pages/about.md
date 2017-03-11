@@ -21,7 +21,7 @@ Subscribe to my blogs <a href="{{ site.baseurl }}/feed.xml"><span class="icon-rs
 {% if site.socialmedia.twitter %}   I'm also on <a href="{{ site.socialmedia.twitter }}"> <i class="icon-twitter"></i> Twitter </a>{% endif %}
 
 
-{% include _callforaction.html url="https://tinyletter.com/digitaldrummerj" text="Signup to get latest updates ›" style="alert" align="" %}
+{% include _callforaction.html url="https://tinyletter.com/makinuk" text="Signup to get latest updates ›" style="alert" align="" %}
 
 **This blog, its content, and opinions are my own.**
 

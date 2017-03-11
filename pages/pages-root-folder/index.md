@@ -21,7 +21,7 @@ widget3:
   url: 'workshops/'
   image: workshop-303x182.jpg 
   #tutorial-header@2x-303x182.jpg
-  #url:https://youtube.com/user/digitaldrummerj'
+  #url:https://youtube.com/user/makinuk'
   #video:
   #  url: 'https://www.youtube.com/embed/3b5zCFSmVvU'
   #  id: videoModal
@@ -43,7 +43,7 @@ widget3:
 # To change colors see sass/_01_settings_colors.scss
 #
 callforaction:
-  url: https://tinyletter.com/digitaldrummerj
+  url: https://tinyletter.com/makinuk
   text: Signup to get latest updates ›
   style: alert
 permalink: /index.html

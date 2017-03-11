@@ -10,7 +10,7 @@ echo -e "Disallow: /cgi-bin/" >> robots.txt
 
 git init
 git config user.name "Travis CI"
-git config user.email "cideploy@digitaldrummerj.me"
+git config user.email "mmm@blogdsd323.me"
 
 git add .
 git commit -m "Deploy"

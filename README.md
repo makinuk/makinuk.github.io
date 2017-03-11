@@ -1,4 +1,4 @@
-My blog at [http://digitaldrummerj.me](http://digitaldrummerj.me)
+My blog at [http://blog.polyboly.com](http://blog.polyboly.com)
 
 Feel free to send Pull Request for any issues that you run into or correction that you think need to be made.  
 
