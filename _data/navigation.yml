@@ -1,13 +1,13 @@
-- title: Blog
+- title: Home
   url: "/"
-  side: left
-
-- title: Details
-  url: "/details"
   side: left
 
 - title: Speaking Engagements
   url: "/speaking/"
+  side: left
+
+- title: Blog
+  url: "/blog/"
   side: left
 
 - title: Workshops
