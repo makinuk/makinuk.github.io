@@ -1,0 +1,80 @@
+{% comment %}
+#
+#   Liquid variables are created at the top to keep the source DRY and clean.
+#   Idea by ericcarlisle.com
+#
+#   Variables › {{ site.baseurl }}/ › site.baseurl
+#   Variables › {{ description }} › excerpt, page.meta_description, or site.description
+#   Variables › {{ title }} › page.title
+#
+{% endcomment %}{% capture ignore %}
+
+{% capture description %}{% if page.meta_description %}{{ page.meta_description }}{% elsif page.teaser %}{{ page.teaser }}{% elsif page.excerpt %}{{ page.excerpt }}{% elsif site.description %}{{ site.description }}{% endif %}{% endcapture %}
+{% assign description = description | strip_html | escape | strip %}
+
+{% capture title %}{% if page.meta_title %}{{ page.meta_title}}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title | strip_html | strip }}{% endif %}{% endcapture %}
+
+{% assign title = title | strip_html | escape | strip_newlines %}
+
+{% endcapture %}<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/styles_feeling_responsive.css">
+
+	<script src="{{ site.baseurl }}/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="{{ description }}">
+  	{% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification}}">{% endif %}
+	{% if site.bing_webmastertools_id %}<meta name="msvalidate.01" content="{{ site.bing_webmastertools_id }}" >{% endif %}
+	{% if site.google_author %}<link rel="author" href="{{ site.google_author }}">{% endif %}
+	{% if site.alexa_verify_id %}<meta name="alexaVerifyID" content="{{ site.alexa_verify_id }}">{% endif %}
+	{% if page.noindex == true or layout.noindex == true %}<meta name="robots" content="noindex">{% endif %}
+	<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+
+	{% if site.socialmedia.twitter %}
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="{{ site.socialmedia.twitter }}">
+	<meta name="twitter:creator" content="{{ site.socialmedia.twitter }}">
+	<meta name="twitter:title" content="{{ title }}">
+	<meta name="twitter:description" content="{{ description }}">
+	{% if page.image.title %}<meta name="twitter:image" content="{{ site.urlimg}}/{{ page.image.title }}">{% endif %}
+	{% endif %}
+
+	<link type="text/plain" rel="author" href="{{ url}}humans.txt">
+
+	{% if page.mediaplayer == true %}
+		<link rel="stylesheet" href="{{ site.baseurl }}/assets/mediaelement_js/mediaelementplayer.min.css">
+	{% endif %}
+
+	{% include _favicon.html %}
+
+	{% unless page.style == NULL %}
+	<style type="text/css">{{ page.style }}</style>
+	{% endunless %}
+
+	{% unless page.stylelink == NULL %}
+	<link rel="stylesheet" href="{{site.baseurl}}{{ page.stylelink }}">
+	{% endunless %}
+
+	{% unless page.includeFontAwesome %}
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+	{% endunless %}
+
+	{% unless page.includeLoraFont %}
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+	{% endunless %}

@@ -1,0 +1,89 @@
+--- 
+layout: default
+format: post 
+---
+
+<div class="row t30">
+	<div class="small-12 medium-12 columns{% if page.sidebar == "left" %} large-8 large-push-4{% elsif page.sidebar == "right" %} large-8 {% endif %}">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				{% if page.image.title %}
+				<figure>
+					<img src="{{ site.urlimg}}/{{ page.image.title }}" width="970" alt="{{ page.title | escape_once }}" itemprop="image">					{% if page.image.caption_url and page.image.caption %}
+					<figcaption class="text-right">
+						<a href="{{ page.image.caption_url }}">{{ page.image.caption }}</a>
+					</figcaption>
+					{% elsif page.image.caption %}
+					<figcaption class="text-right">
+						{{ page.image.caption }}
+					</figcaption>
+					{% endif %}
+				</figure>
+				{% endif %}
+
+				<div itemprop="name">
+					{% if page.subheadline %}
+					<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
+					<h1>{{ page.title }}</h1>
+				</div>
+
+				{% if page.teaser %}
+				<p class="teaser" itemprop="description">
+					{{ page.teaser }}
+				</p>
+				{% endif %}
+
+				{% if page.show_meta.info %}
+				{% include _meta_information.html post=page %}
+				{% endif %}
+			</header>
+
+
+
+			<div itemprop="articleSection">
+				{% if page.series %}
+				{% include series.html %}
+				{% endif %}
+				{{ content }}
+				
+				{% if page.series %}
+				<h2 class="t60">Series Post</h2>
+
+				{% include list-posts series=page.series %}
+				{% endif %}
+    
+			</div>
+
+			{% if page.show_meta.sharer %}
+			{% include _sharer.html %}
+			{% endif %}
+
+			{% if page.show_meta.comments %}
+			{% include _comments.html %}
+			{% endif %}
+
+			{% if page.show_meta.info %}
+			{% include _meta_information.html post=page%}
+			{% endif %}
+			
+			{% if page.show_meta.navigation %}
+			{% include {{page.show_meta.navigation}} %}
+			{% endif %}
+		</article>
+	</div>
+	<!-- /.medium-8.columns -->
+
+
+	{% if page.sidebar == "left" %}
+	<div class="show-for-large-up large-4 columns large-pull-8">
+		{% include _sidebar.html %}
+	</div>
+	<!-- /.medium-4.columns -->
+	{% endif %} {% if page.sidebar == "right" %}
+	<div class="show-for-large-up large-4 columns">
+		{% include _sidebar.html %}
+	</div>
+	<!-- /.medium-4.columns -->
+	{% endif %}
+</div>
+<!-- /.row -->

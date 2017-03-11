@@ -1,0 +1,28 @@
+{% if page.series %}
+
+
+{% assign count = '0' %}
+{% assign idx = '0' %}
+{% assign list = '' %}
+
+{% capture open %}
+<div class="series-nav">
+<p>This article is <strong>Part <<idx>> </strong> in a <strong><<count>>-Part</strong> Series.</p>
+<ul class="side-nav">
+{% endcapture %}
+
+{% for post in site.posts reversed %}
+	{% if post.series == page.series %}
+		{% assign count = count | plus: 1 %}
+		{% if post.url == page.url %}
+			{% assign idx = count %}
+		{% endif %}			
+		{% capture list_tmp %}{{ list }}{% if page.url == post.url %}<li class="current"><span>Part {{ count }} - This Article</span>{% else %}<li><a data-proofer-ignore href="{{site.url}}/{{ site.baseurl }}{{ post.url }}">Part {{ count }} - {{ post.title }}</a>{% endif %}</li>
+		{% endcapture %}
+		{% assign list = list_tmp %}		
+	{% endif %}
+{% endfor %}
+
+
+{{ open | replace: '<<count>>', count | replace: '<<idx>>', idx }}{{ list }}</ul></div>
+{% endif %}

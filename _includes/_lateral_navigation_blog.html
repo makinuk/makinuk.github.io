@@ -1,0 +1,14 @@
+<nav id="pagination">
+    {% if page.previous.url %}
+    <a rel="prev" class="radius button small small-12 medium-4 pull-left" href="{{ site.baseurl }}{{page.previous.url}}">&laquo; {{page.previous.title | truncate: 20 }}</a>
+    {% endif %}
+
+
+    {% if page.next.url %}
+    <a rel="next" class="radius button small small-12 medium-4 pull-right" href="{{ site.baseurl }}{{page.next.url}}">{{page.next.title | truncate: 20}} &raquo;</a>
+    {% endif %}
+
+    <a class="radius button small small-12 medium-12 hide-for-large-up pull-left" href="{{ site.baseurl }}/blog/archive/">{{ site.data.language.archive }}</a>
+
+    
+</nav>

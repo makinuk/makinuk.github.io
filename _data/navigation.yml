@@ -1,0 +1,29 @@
+- title: Home
+  url: "/"
+  side: left
+
+- title: Speaking Engagements
+  url: "/speaking/"
+  side: left
+
+- title: Blog
+  url: "/blog/"
+  side: left
+
+- title: Workshops
+  url: "/workshops/"
+  side: left
+  dropdown:
+      - special: workshops
+- title: "About"
+  url: "/about/"
+  side: right
+  
+- title: "Contact"
+  url: "/contact/"
+  side: right
+
+- title: "Search"
+  url: "/search/"
+  side: right
+

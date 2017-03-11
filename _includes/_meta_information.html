@@ -1,0 +1,43 @@
+{% assign metadata = include.post %}
+{% assign categories = metadata.categories | sort %}
+{% assign author = site.data.authors[metadata.author] %}
+
+<div id="page-meta" class="t10">
+	<p>
+		{% if author %}
+		<!-- Look the author details up from the site config. -->
+		<!-- Output author details if some exist. -->
+		<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="{{ author.uri }}" target="_blank"> {{ author.name }}</a></span>
+		</span>
+		{% endif %} 
+		
+		{% if metadata.date %}
+		<span class="pr20">
+		<a href="{{ site.baseurl }}/blog/archive/monthview/#{{ metadata.date | date: "%Y-%m"}}">
+			<span class="icon-calendar"></span><time  datetime="{{ metadata.date | date: "%Y-%m-%d" }}" itemprop="datePublished">{{ metadata.date | date: "%Y-%m-%d" }}</time>
+		</a>
+		</span>
+		{% endif %} 
+		
+{% if categories.size > 0 %}
+<span class="meta-tags">
+	<span class="icon-price-tag"></span>
+	<span>
+	{% assign tags_content = '' %}
+	{% for category in categories %}
+		{% capture tags_content_temp %}{{ tags_content }}{% if forloop.last == true and categories.size > 1 %} and {% endif %}
+		<a href="{{ site.baseurl }}/blog/archive/categoryview/#{{ category | slugify }}">{{ category | replace: '-', ' ' }}</a>{% if forloop.last == false and categories.size > 2 %}, {% endif %}{% endcapture %}
+		{% assign tags_content = tags_content_temp %}
+	{% endfor %}
+
+{{tags_content}}
+{% assign tags_content = '' %}
+{% assign tags_content_temp = '' %}
+</span><!-- /.pr20 -->
+</span><!-- /.meta-tags -->
+{% endif %}
+
+
+	</p>
+</div>
+<!--  /.page-meta -->
