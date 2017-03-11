@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Capistrano configuration for deploy with gitlab
+published: true
 date: 2017-03-11 16:55:10
 categories: [Capistrano]
 excerpt: | 
