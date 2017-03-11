@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Capistrano configuration for deploy with gitlab"
-date: $(DATE)
+title: Capistrano configuration for deploy with gitlab
+date: 2017-03-11 16:55:10
 categories: [Capistrano]
 excerpt: | 
     Capistrano is written in Ruby, but it can easily be used to deploy any language.
