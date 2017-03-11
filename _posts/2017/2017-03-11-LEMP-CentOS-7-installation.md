@@ -3,7 +3,7 @@ layout: post
 title: LEMP-CentOS 7 Installation		
 published: true		
 categories: [Centos7]		
-date: 2017-03-11 20:45:35		
+date: 2017-03-10 20:45:35		
 ---		
  
 ## Prepare Machine
