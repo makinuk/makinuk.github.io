@@ -1,0 +1,13 @@
+# Robocopy Examples
+
+Robocopy is a command that is used at the command line to make copies of files and folders. It is also known as Robust File Copy. It comes with windows vista, but was also part of the windows resource kit. It was made to be used for mirroring directories.
+
+## Move all folders and files
+```
+SET MoveDirSource=\\path\to\source\
+SET MoveDirDestination=D:\path\to\target
+
+MKDIR "%MoveDirDestination%"
+FOR    %%i IN ("%MoveDirSource%\*") DO           MOVE /Y "%%i" "%MoveDirDestination%\%%~nxi"
+FOR /D %%i IN ("%MoveDirSource%\*") DO ROBOCOPY /MOVE /E "%%i" "%MoveDirDestination%\%%~nxi"
+```
