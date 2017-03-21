@@ -1,3 +1,15 @@
+---
+layout: post
+title: "Robocopy Example Commands"
+published: true
+date: 2017-03-21 10:00:00
+categories: [Robocopy]
+excerpt: | 
+        Robocopy is a command that is used at the command line to make copies of files and folders. 
+        
+        It is also known as Robust File Copy. It comes with windows vista, but was also part of the windows resource kit. It was made to be used for mirroring directories.
+---
+
 # Robocopy Examples
 
 Robocopy is a command that is used at the command line to make copies of files and folders. It is also known as Robust File Copy. It comes with windows vista, but was also part of the windows resource kit. It was made to be used for mirroring directories.
