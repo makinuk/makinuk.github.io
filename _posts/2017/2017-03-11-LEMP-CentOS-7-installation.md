@@ -21,7 +21,6 @@ sudo yum update
  
 ```sh
 sudo yum -y install nginx
-sudo systemctl start nginx
 sudo firewall-cmd --permanent --zone=public --add-service=http 
 sudo firewall-cmd --permanent --zone=public --add-service=https
 sudo firewall-cmd --reload
@@ -33,7 +32,8 @@ sudo systemctl start nginx
 - install snmp `yum -y install net-snmp net-snmp-utils`
 - keep orginal config file `cp /etc/snmp/snmpd.conf /etc/snmp/snmpd.conf.BAK`
 - clear current config file `echo "" > /etc/snmp/snmpd.conf` and paste below text with changing SERVERHOST
-```
+
+```sh
 rocommunity  public  *SERVERHOST*
 rocommunity  public   127.0.0.1
 syslocation  "HUS, DTM"
@@ -46,6 +46,7 @@ includeAllDisks 10%
 ```
  
 - Open `vi /etc/firewalld/services/snmp.xml` and copy below text
+
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <service>
@@ -53,7 +54,7 @@ includeAllDisks 10%
   <description>SNMP protocol</description>
   <port protocol="udp" port="161"/>
 </service>
-```
+```sh
 - reload fierwall  `firewall-cmd --reload`
 - dd the service to your public zone `firewall-cmd --zone=public --add-service snmp --permanent`
 - again reload fierwall `firewall-cmd --reload`
@@ -77,6 +78,7 @@ sudo yum install -y php php-mysql php-fpm php-intl php-common php-opcache php-do
 ```
 
 ### PHP 7 
+
 ```sh
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 sudo yum install -y php70w php70w-mysql php70w-fpm php70w-intl php70w-common php70w-opcache php70w-dom php70w-mcrypt
