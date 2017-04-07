@@ -47,14 +47,16 @@ includeAllDisks 10%
  
 - Open `vi /etc/firewalld/services/snmp.xml` and copy below text
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <service>
   <short>SNMP</short>
   <description>SNMP protocol</description>
   <port protocol="udp" port="161"/>
 </service>
-```sh
+```
+
+
 - reload fierwall  `firewall-cmd --reload`
 - dd the service to your public zone `firewall-cmd --zone=public --add-service snmp --permanent`
 - again reload fierwall `firewall-cmd --reload`
@@ -113,7 +115,7 @@ mv composer.phar /usr/local/bin/composer
 - open `sudo vi /etc/nginx/conf.d/default.conf`
 - add below nginx configuration
  
-```
+```sh
 server {
     listen       80;
     server_name  domainname.com;
