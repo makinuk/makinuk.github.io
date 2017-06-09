@@ -17,9 +17,15 @@ Unlike other text-based shells, PowerShell harnesses the power of the .NET Frame
  
  
 [Official Documentation](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.management/microsoft.powershell.management)
- 
-## Find working process
 
+# Remove Prefix from folder/file name
+
+```
+Get-ChildItem UP-* | foreach {rename-item $_ $_.Name.Replace("UP-", "")}
+```
+
+
+## Find working process
 
 Find working php files : 
 
