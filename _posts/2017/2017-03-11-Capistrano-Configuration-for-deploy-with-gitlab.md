@@ -32,7 +32,7 @@ sudo usermod -a -G deployers deploy
 ```ssh 
 ..
 ## Allows people in group wheel to run all commands
-%deployers      ALL=(ALL)NOPASSWD:/bin/chown, /bin/chmod
+deploy      ALL=(ALL)NOPASSWD:/bin/chown, /bin/chmod,/bin/mkdir
 
 ..
 ```
@@ -52,7 +52,6 @@ ssh-keygen -t rsa -b 4096 -C "deploy@example.com"
 - install git on new server `yum -y install git`
 - change project installation folder group `chgrp -hR deployers /var/www`
 - change project installation folder permission `chmod 775 -R /var/www`
-- optional `visudo` add `%deploy   ALL=(ALL)NOPASSWD:/bin/chown, /bin/chmod`
 
 > first create capistrano config file with `cap install` command on project root folder.
 
