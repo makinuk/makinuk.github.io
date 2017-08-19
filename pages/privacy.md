@@ -1,12 +1,10 @@
 ---
 layout: page
-title: "About"
-subheadline: "Privacy Policy"
-teaser: "Privacy Policy"
+title: "Privacy Policy"
+#subheadline: "Privacy Policy"
+#teaser: "Privacy Policy"
 permalink: "/privacy/"
 ---
-
-<h1>Privacy Policy</h1>
 
 
 <p><!--INFOLINKS_OFF-->We respect your privacy and we are committed to safeguarding your privacy while online at our site <a href="http://www.makinuk.com" target="_blank">www.makinuk.com</a>. The following discloses the information gathering and dissemination practices for this Web site.</p>
