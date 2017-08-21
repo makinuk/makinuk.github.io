@@ -1,0 +1,3 @@
+User-Agent: *
+Sitemap: http://www.makinuk.com/sitemap.xml
+Host: www.makinuk.com
