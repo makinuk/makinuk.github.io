@@ -1,5 +1,0 @@
-# Centos Firewall Process
-
-#Services 
-
-- ls -la /usr/lib/firewalld/services
