@@ -3,16 +3,15 @@ layout: post
 title: "Centos Firewall Configurations"
 published: true
 date: 2017-08-23 16:00:00
-categories: [Centos7]
+categories: [Robocopy]
 excerpt: | 
-       The easiest method is to add the services or ports you need to the zones you are using. 
-Again, you can get a list of the available services with the
-        or instance, if we are running a web server serving conventional HTTP traffic, we can allow this traffic for interfaces in our "public" zone for this session by typing.
+        The easiest method is to add the services or ports you need to the zones you are using. Again you can get a list of the available services with the
+
+        For instance, if we are running a web server serving conventional HTTP traffic, we can allow this traffic for interfaces in our public zone for this session by typing.
 ---
 
-
 # Centos Firewall
-## Services 
+### Services 
 
 ### Adding a Service to specific Zones
 
