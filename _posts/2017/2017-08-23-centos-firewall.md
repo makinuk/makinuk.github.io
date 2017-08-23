@@ -3,7 +3,7 @@ layout: post
 title: "Centos Firewall Configurations"
 published: true
 date: 2017-08-23 16:00:00
-categories: [Robocopy]
+categories: [Centos7]
 excerpt: | 
         The easiest method is to add the services or ports you need to the zones you are using. Again you can get a list of the available services with the
 
