@@ -1,13 +1,13 @@
 ---		
 layout: post		
-title: LEMP-CentOS 7 Installation		
+title: CentOS-Firewall-Cmd		
 published: true
 categories: [Centos7]		
 date: 2017-08-26 09:45:35
 excerpt: | 
-        The easiest method is to add the services or ports you need to the zones you are using. Again you can get a list of the available services with the
+        The easiest method is to add the services or ports you need to the zones you are using.
 	
-        For instance, if we are running a web server serving conventional HTTP traffic, we can allow this traffic for interfaces in our public zone for this session by typing.
+        For instance, if we are running a web server serving conventional HTTP traffic...
 ---		
  
 # Centos Firewall Configuration
