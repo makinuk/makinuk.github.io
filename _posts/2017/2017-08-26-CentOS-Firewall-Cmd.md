@@ -1,6 +1,6 @@
 ---		
 layout: post		
-title: CentOS-Firewall-Cmd
+title: LEMP-CentOS 7 Installation		
 published: true
 categories: [Centos7]		
 date: 2017-08-26 09:45:35
@@ -9,7 +9,7 @@ excerpt: |
 
         LEMP-CentOS 7 Installation
 ---		
- 
+
 ## Prepare Machine
  
 ```sh
