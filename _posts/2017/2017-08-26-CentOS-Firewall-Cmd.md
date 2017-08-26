@@ -3,7 +3,7 @@ layout: post
 title: CentOS-Firewall-Cmd		
 published: true
 categories: [Centos7]		
-date: 2017-08-26 09:45:35
+date: 2017-08-26 04:00:00
 excerpt: | 
         The easiest method is to add the services or ports you need to the zones you are using.
 	
