@@ -1,4 +1,4 @@
----		
+---
 layout: post		
 title: CentOS-Firewall-Cmd		
 published: true
@@ -8,7 +8,7 @@ excerpt: |
         The easiest method is to add the services or ports you need to the zones you are using.
 	
         For instance, if we are running a web server serving conventional HTTP traffic...
----		
+---
  
 # Centos Firewall Configuration
 
