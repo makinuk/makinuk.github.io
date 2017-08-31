@@ -33,6 +33,6 @@ RH-Satellite-6 amanda-client amanda-k5-client bacula bacula-client ceph ceph-mon
 For instance, if we are running a web server serving conventional HTTP traffic, we can allow this traffic for interfaces in our "public" zone for this session by typing:
 
 ```
-sudo firewall-cmd --zone=public --add-service=http
+sudo firewall-cmd --zone=public --permanent --add-service=http
 sudo firewall-cmd --reload
 ```
