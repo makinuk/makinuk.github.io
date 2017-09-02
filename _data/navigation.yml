@@ -10,11 +10,13 @@
   url: "/blog/"
   side: left
 
-- title: Workshops
-  url: "/workshops/"
-  side: left
-  dropdown:
-      - special: workshops
+
+#- title: Workshops
+#  url: "/workshops/"
+#  side: left
+#  dropdown:
+#      - special: workshops
+
 - title: "About"
   url: "/about/"
   side: right
