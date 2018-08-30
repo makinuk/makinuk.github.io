@@ -1,4 +1,4 @@
-My blog at [http://www.makinuk.com](http://www.makinuk.com)
+My blog at [http://www.makinuk.com](http://makinuk.github.io)
 
 Feel free to send Pull Request for any issues that you run into or correction that you think need to be made.  
 
