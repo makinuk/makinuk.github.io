@@ -36,3 +36,11 @@ For instance, if we are running a web server serving conventional HTTP traffic, 
 sudo firewall-cmd --zone=public --permanent --add-service=http
 sudo firewall-cmd --reload
 ```
+
+### Adding a Port to specific Zones
+
+
+```
+sudo firewall-cmd --zone=public --permanent --add-port=9090/tcp
+sudo firewall-cmd --reload
+```
