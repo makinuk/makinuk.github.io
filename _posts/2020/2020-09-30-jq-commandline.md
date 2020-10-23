@@ -1,6 +1,6 @@
 ---
 layout: post	
-title: CentOS Firewall Cmd	
+title: jq Command Line	
 published: true	
 categories: [Json]	
 date: 2020-09-30 09:00
