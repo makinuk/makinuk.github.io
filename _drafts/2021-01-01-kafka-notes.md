@@ -1,3 +1,15 @@
+---
+layout: post	
+title: Kafka 2.7.0 Installatin on CentOS 8 	
+published: true	
+categories: [kafka]	
+date: 2021-01-01 09:00
+excerpt: | 
+     export file list as Json via jq
+     
+---
+
+ 
 ## Introduction
 
 Apache Kafka is a popular distributed message broker designed to efficiently handle large volumes of real-time data. 
