@@ -327,6 +327,15 @@ If you want to create a multi-broker cluster using more CentOS 8 machines, you s
 
 If you want to have multiple ZooKeeper instances for your cluster, the value of the zookeeper.connect property on each node should be an identical, comma-separated string listing the IP addresses and port numbers of all the ZooKeeper instances.
 
+--- 
+### if clustur not working check this :
+> `ERROR Fatal error during KafkaServer startup. Prepare to shutdown (kafka.server.KafkaServer)
+kafka.common.InconsistentClusterIdException: The Cluster ID jvrDMiqjSWmPEMoAPD9iMQ doesn't match stored clusterId Some(DrtQg1zUTAW4VoYZjb_F7A) in meta.properties. The broker is trying to join the wrong cluster. Configured zookeeper.connect may be wrong.`
+
+> The Kafka data directory (check config/server.properties for log.dirs property, it defaults to /tmp/kafka-logs) contains a file called meta.properties. It contains the cluster ID. Which should have matched the ID registered to ZK. Either edit the file to match ZK, edit ZK to match the file, or delete the file (it contains the cluster id and the broker id, the first is currently broken and the second is in the config file normally). After this minor surgery, Kafka will start with all your existing data, since you didn't delete any data file.
+> 
+> Like this: `mv /tmp/kafka-logs/meta.properties /tmp/kafka-logs/meta.properties_old`
+
 ## Step 8 — Restricting the Kafka User
 Now that all of the installations are done, you can remove the kafka user’s admin privileges. Before you do so, log out and log back in as any other non-root sudo user. If you are still running the same shell session you started this tutorial with, simply type exit.
 
