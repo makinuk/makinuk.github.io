@@ -32,7 +32,7 @@ To follow along, you will need:
 ## Step 1 — Creating a User for Kafka and Firewall rules
 
 ### Firewall Rules
-As mentioned above we have to open several ports to allow clients to connect to our Kafka cluster and to allow the nodes to communicate with each other. In CentOS 7 we have to add the corresponding firewall rules.
+As mentioned above we have to open several ports to allow clients to connect to our Kafka cluster and to allow the nodes to communicate with each other. In CentOS 8 we have to add the corresponding firewall rules.
 
 Let's start with the firewall rule for ZooKeeper. We have to open ports 2888, 3888 and 2181.
 ```bash
