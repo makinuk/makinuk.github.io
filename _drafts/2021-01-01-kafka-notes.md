@@ -70,7 +70,7 @@ $ curl "https://downloads.apache.org/kafka/2.7.0/kafka_2.13-2.7.0.tgz" -o ~/Down
 ```
 Create a directory called `kafka` and change to this directory. This will be the base directory of the Kafka installation:
 ```bash
-mkdir ~/kafka && cd ~/kafka
+$ mkdir ~/kafka && cd ~/kafka
 ```
 Extract the archive you downloaded using the `tar` command:
 ```bash
@@ -184,6 +184,11 @@ Let’s publish and consume a “Hello World” message to make sure the Kafka s
 
 - **A producer**, which enables the publication of records and data to topics.
 - **A consumer**, which reads messages and data from topics.
+
+First, create a topic named `TutorialTopic` by typing:
+```bash
+$ ~/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic TutorialTopic
+```
 
 You will see the following output:
 ```bash
