@@ -29,8 +29,59 @@ To follow along, you will need:
 - At least 4GB of RAM on the server. Installations without this amount of RAM may cause the Kafka service to fail, with the Java virtual machine (JVM) throwing an “Out Of Memory” exception during startup.
 - OpenJDK 8 installed on your server. To install this version, follow these instructions on installing specific versions of OpenJDK. Kafka is written in Java, so it requires a JVM; however, its startup shell script has a version detection bug that causes it to fail to start with JVM versions above 8.
 
-## Step 1 — Creating a User for Kafka
+## Step 1 — Creating a User for Kafka and Firewall rules
 
+### Firewall Rules
+As mentioned above we have to open several ports to allow clients to connect to our Kafka cluster and to allow the nodes to communicate with each other. In CentOS 7 we have to add the corresponding firewall rules.
+
+Let's start with the firewall rule for ZooKeeper. We have to open ports 2888, 3888 and 2181.
+```bash
+root@bari01$ vi /etc/firewalld/services/zooKeeper.xml
+```
+
+We have to add the following content to the zooKeeper.xml file.
+```
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>ZooKeeper</short>
+  <description>Firewall rule for ZooKeeper ports</description>
+  <port protocol="tcp" port="2888"/>
+  <port protocol="tcp" port="3888"/>
+  <port protocol="tcp" port="2181"/>
+</service>
+```
+
+For Kafka, we have to open port 9092.
+```bash
+$ vi /etc/firewalld/services/kafka.xml
+```
+
+We have to add the following content to the kafka.xml file.
+```
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Kafka</short>
+  <description>Firewall rule for Kafka port</description>
+  <port protocol="tcp" port="9092"/>
+</service>
+```
+
+Now we can activate the new firewall rules. Let's first restart the firewalld service to enforce that all existing service specifications are reloaded.
+```bash
+$ systemctl restart firewalld
+```
+We can now permanently add the firewall rules for ZooKeeper and Kafka.
+```bash
+$ firewall-cmd --permanent --add-service=zooKeeper
+$ firewall-cmd --permanent --add-service=kafka
+```
+
+After activating the rules we have to restart firewalld.
+```bash
+$ systemctl restart firewalld
+```
+
+### Users
 Since Kafka can handle requests over a network, you should create a dedicated user for it. This minimizes damage to your CentOS machine should the Kafka server be compromised. We will create a dedicated kafka user in this step, but you should create a different non-root user to perform other tasks on this server once you have finished setting up Kafka.
 
 Logged in as your non-root sudo user, create a user called kafka with the useradd command:
