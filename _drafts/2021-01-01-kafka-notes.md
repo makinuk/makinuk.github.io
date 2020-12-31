@@ -5,7 +5,7 @@ published: true
 categories: [kafka]	
 date: 2021-01-01 09:00
 excerpt: | 
-     export file list as Json via jq
+     Kafka instalation on CentOS 8
      
 ---
 
