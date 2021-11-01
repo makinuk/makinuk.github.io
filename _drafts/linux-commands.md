@@ -1,3 +1,8 @@
+### kill process which is running more than 2 hours
+```bash
+kill $(ps -eo pid,etimes,cmd | grep FILTERTEXT | awk '{if ($2 > 7200) {print $1}}')
+```
+
 To recursively give directories read&execute privileges:
 
 find /path/to/base/dir -type d -exec chmod 755 {} +
